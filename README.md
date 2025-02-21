@@ -43,6 +43,67 @@ Laporan ini akan membahas berbagai aspek dari NestJS, mulai dari pengenalan dan 
 
 BAB II
 PEMBAHASAN
+    ## Struktur file dan penjelasan file
+    📦LATIHAN-NEST
+    ┃ 📦dist
+    ┃ 📦node-# Project Structure
+    📦LATIHAN-NEST
+    ┃ 📦dist
+    ┃ ┃ ┗ 📜... (Output untuk file yang telah dikompilasi)
+    ┃ 📦node-modules
+    ┃ ┃ ┗ 📜... (Direktori yang berisi semua dependensi Node.js yang diinstal)
+    ┃ 📦prisma
+    ┃ ┃ ┗ 📜schema.prisma (Skema database Prisma)
+    ┃ 📦src
+    ┃ ┣ 📂chat
+    ┃ ┃ ┣ 📂dto
+    ┃ ┃ ┃ ┣ 📜create-chat.dto.ts (DTO untuk membuat chat baru)
+    ┃ ┃ ┃ ┗ 📜update-chat.dto.ts (DTO untuk memperbarui chat)
+    ┃ ┃ ┣ 📂entities
+    ┃ ┃ ┃ ┗ 📜chat.entity.ts (Entitas chat)
+    ┃ ┃ ┣ 📜chat.gateway.spec.ts (File pengujian untuk gateway chat)
+    ┃ ┃ ┣ 📜chat.gateway.ts (Mengatur komunikasi WebSocket untuk fitur chat)
+    ┃ ┃ ┣ 📜chat.module.ts (Modul chat)
+    ┃ ┃ ┣ 📜chat.service.spec.ts (File pengujian untuk service chat)
+    ┃ ┃ ┗ 📜chat.service.ts (Service untuk fitur chat)
+    ┃ ┣ 📂dto
+    ┃ ┃ ┣ 📜catatan.txt (Catatan umum)
+    ┃ ┃ ┣ 📜create-mahasiswa.dto.ts (DTO untuk membuat mahasiswa baru)
+    ┃ ┃ ┣ 📜login-user.dto.ts (DTO untuk login pengguna)
+    ┃ ┃ ┣ 📜register-user.dto.ts (DTO untuk registrasi pengguna)
+    ┃ ┃ ┗ 📜update-mahasiswa.dto.ts (DTO untuk memperbarui mahasiswa)
+    ┃ ┣ 📂entity
+    ┃ ┃ ┗ 📜user.entity.ts (Entitas pengguna)
+    ┃ ┣ 📂profile
+    ┃ ┃ ┣ 📜profile.controller.spec.ts (File pengujian untuk controller profil)
+    ┃ ┃ ┣ 📜profile.controller.ts (Controller untuk fitur profil)
+    ┃ ┃ ┣ 📜profile.module.ts (Modul profil)
+    ┃ ┃ ┣ 📜profile.service.spec.ts (File pengujian untuk service profil)
+    ┃ ┃ ┗ 📜profile.service.ts (Service untuk fitur profil)
+    ┃ ┣ 📜app.controller.spec.ts (File pengujian untuk controller utama)
+    ┃ ┣ 📜app.controller.ts (Controller utama aplikasi)
+    ┃ ┣ 📜app.module.ts (Modul utama aplikasi)
+    ┃ ┣ 📜app.service.ts (Service utama aplikasi)
+    ┃ ┣ 📜auth-module.ts (Modul untuk autentikasi)
+    ┃ ┣ 📜auth.guard.ts (Guard untuk autentikasi)
+    ┃ ┣ 📜main.ts (File entry point aplikasi)
+    ┃ ┣ 📜prisma.servis.ts (Service untuk Prisma)
+    ┃ ┣ 📜prisma.ts (File konfigurasi Prisma)
+    ┃ ┗ 📜user.decorator.ts (Dekorator untuk pengguna)
+    ┃ 📦test
+    ┃ ┣ 📜app.e2e-spec.ts (File pengujian end-to-end untuk aplikasi)
+    ┃ ┗ 📜jest-e2e.json (Konfigurasi Jest untuk pengujian end-to-end)
+    ┃ 📦uploads
+    ┃ ┗ 📜105841106922-1738231723215-614657552.jpg (Contoh file yang diunggah)
+    ┃ ┣ 📜.env (File konfigurasi environment)
+    ┃ ┣ 📜.gitignore (File untuk mengabaikan file dan direktori tertentu dalam Git)
+    ┃ ┣ 📜.prettierrc (Konfigurasi untuk Prettier)
+    ┃ ┣ 📜nest-cli.json (Konfigurasi untuk Nest CLI)
+    ┃ ┣ 📜package-lock.json (File lock untuk npm)
+    ┃ ┣ 📜package.json (File konfigurasi proyek Node.js)
+    ┃ ┣ 📜README.md (File dokumentasi proyek)
+    ┃ ┣ 📜tsconfig.build.json (Konfigurasi TypeScript untuk build)
+    ┗ ┗ 📜tsconfig.json (Konfigurasi utama TypeScript
 
 1.1. Apa itu Backend?
 Backend adalah bagian dari pengembangan perangkat lunak yang berfungsi
