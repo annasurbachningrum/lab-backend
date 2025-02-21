@@ -111,12 +111,7 @@ Laporan ini bertujuan untuk:
 Laporan ini akan membahas berbagai aspek dari NestJS, mulai dari pengenalan dan instalasi, hingga fitur-fitur seperti autentikasi, middleware, guard, decorator, dan WebSocket. Selain itu, laporan ini juga akan membahas penggunaan NestJS bersama dengan Prisma untuk interaksi dengan database.
 ```
 ```
-1.5 Sistematika Penulisan
-- BAB I: PENDAHULUAN
-- BAB II: PEMBAHASAN
-- BAB III: KESIMPULAN
-```
-```
+
 BAB II
 PEMBAHASAN
 
@@ -187,7 +182,7 @@ aplikasi Anda).
 operasi hotel. Service adalah tempat di mana semua pekerjaan "berat" dan logika bisnis dilakukan.
 ```
 ```
-1.3.1. Tugas dari Controller dan Service
+2.3.1. Tugas dari Controller dan Service
 1. Controller
 a. Menerima Tamu (Permintaan HTTP): Resepsionis menyambut tamu yang datang ke hotel,
 baik itu tamu yang datang langsung (misalnya, melalui browser) atau melalui telepon
