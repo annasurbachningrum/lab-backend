@@ -1,7 +1,79 @@
 LAPORAN LAB BACKEND
 NEST JS
-Disusun Oleh: ANNAS URBACH NIINGRUM (105841109022)
+```
+Disusun Oleh
+```
+| NAMA  |ANNAS URBACH NIINGRUM | 
+|-----|--------------|
+| NIM |105841109022 |
+| KELAS | 5-C | 
 
+
+
+# Struktur file
+```
+    📦LATIHAN-NEST
+    ┃ 📦dist
+    ┃ 📦node-# Project Structure
+    📦LATIHAN-NEST
+    ┃ 📦dist
+    ┃ ┃ ┗ 📜... (Output untuk file yang telah dikompilasi)
+    ┃ 📦node-modules
+    ┃ ┃ ┗ 📜... (Direktori yang berisi semua dependensi Node.js yang diinstal)
+    ┃ 📦prisma
+    ┃ ┃ ┗ 📜schema.prisma (Skema database Prisma)
+    ┃ 📦src
+    ┃ ┣ 📂chat
+    ┃ ┃ ┣ 📂dto
+    ┃ ┃ ┃ ┣ 📜create-chat.dto.ts (DTO untuk membuat chat baru)
+    ┃ ┃ ┃ ┗ 📜update-chat.dto.ts (DTO untuk memperbarui chat)
+    ┃ ┃ ┣ 📂entities
+    ┃ ┃ ┃ ┗ 📜chat.entity.ts (Entitas chat)
+    ┃ ┃ ┣ 📜chat.gateway.spec.ts (File pengujian untuk gateway chat)
+    ┃ ┃ ┣ 📜chat.gateway.ts (Mengatur komunikasi WebSocket untuk fitur chat)
+    ┃ ┃ ┣ 📜chat.module.ts (Modul chat)
+    ┃ ┃ ┣ 📜chat.service.spec.ts (File pengujian untuk service chat)
+    ┃ ┃ ┗ 📜chat.service.ts (Service untuk fitur chat)
+    ┃ ┣ 📂dto
+    ┃ ┃ ┣ 📜catatan.txt (Catatan umum)
+    ┃ ┃ ┣ 📜create-mahasiswa.dto.ts (DTO untuk membuat mahasiswa baru)
+    ┃ ┃ ┣ 📜login-user.dto.ts (DTO untuk login pengguna)
+    ┃ ┃ ┣ 📜register-user.dto.ts (DTO untuk registrasi pengguna)
+    ┃ ┃ ┗ 📜update-mahasiswa.dto.ts (DTO untuk memperbarui mahasiswa)
+    ┃ ┣ 📂entity
+    ┃ ┃ ┗ 📜user.entity.ts (Entitas pengguna)
+    ┃ ┣ 📂profile
+    ┃ ┃ ┣ 📜profile.controller.spec.ts (File pengujian untuk controller profil)
+    ┃ ┃ ┣ 📜profile.controller.ts (Controller untuk fitur profil)
+    ┃ ┃ ┣ 📜profile.module.ts (Modul profil)
+    ┃ ┃ ┣ 📜profile.service.spec.ts (File pengujian untuk service profil)
+    ┃ ┃ ┗ 📜profile.service.ts (Service untuk fitur profil)
+    ┃ ┣ 📜app.controller.spec.ts (File pengujian untuk controller utama)
+    ┃ ┣ 📜app.controller.ts (Controller utama aplikasi)
+    ┃ ┣ 📜app.module.ts (Modul utama aplikasi)
+    ┃ ┣ 📜app.service.ts (Service utama aplikasi)
+    ┃ ┣ 📜auth-module.ts (Modul untuk autentikasi)
+    ┃ ┣ 📜auth.guard.ts (Guard untuk autentikasi)
+    ┃ ┣ 📜main.ts (File entry point aplikasi)
+    ┃ ┣ 📜prisma.servis.ts (Service untuk Prisma)
+    ┃ ┣ 📜prisma.ts (File konfigurasi Prisma)
+    ┃ ┗ 📜user.decorator.ts (Dekorator untuk pengguna)
+    ┃ 📦test
+    ┃ ┣ 📜app.e2e-spec.ts (File pengujian end-to-end untuk aplikasi)
+    ┃ ┗ 📜jest-e2e.json (Konfigurasi Jest untuk pengujian end-to-end)
+    ┃ 📦uploads
+    ┃ ┗ 📜105841106922-1738231723215-614657552.jpg (Contoh file yang diunggah)
+    ┃ ┣ 📜.env (File konfigurasi environment)
+    ┃ ┣ 📜.gitignore (File untuk mengabaikan file dan direktori tertentu dalam Git)
+    ┃ ┣ 📜.prettierrc (Konfigurasi untuk Prettier)
+    ┃ ┣ 📜nest-cli.json (Konfigurasi untuk Nest CLI)
+    ┃ ┣ 📜package-lock.json (File lock untuk npm)
+    ┃ ┣ 📜package.json (File konfigurasi proyek Node.js)
+    ┃ ┣ 📜README.md (File dokumentasi proyek)
+    ┃ ┣ 📜tsconfig.build.json (Konfigurasi TypeScript untuk build)
+    ┗ ┗ 📜tsconfig.json (Konfigurasi utama TypeScript
+```
+```
 Kata Pengantar
 Puji syukur kehadirat Allah SWT atas rahmat dan karunia-Nya, sehingga laporan laboratorium backend ini dapat diselesaikan dengan baik. Laporan ini merupakan hasil dari serangkaian percobaan dan eksplorasi mengenai framework NestJS.
 
@@ -12,7 +84,8 @@ Laporan ini diharapkan dapat memberikan pemahaman tentang NestJS, serta menjadi 
 Penulis menyadari bahwa laporan ini masih jauh dari sempurna. Oleh karena itu, segala kritik dan saran yang membangun sangat penulis harapkan demi penyempurnaan laporan ini di masa mendatang.
 
 Akhir kata, penulis mengucapkan terima kasih kepada semua pihak yang telah berkontribusi dalam penyusunan laporan ini. Semoga laporan ini dapat bermanfaat bagi para pembaca.
-
+```
+```
 BAB I 
 PENDAHULUAN
 
@@ -36,12 +109,14 @@ Laporan ini bertujuan untuk:
 
 1.4. Ruang Lingkup
 Laporan ini akan membahas berbagai aspek dari NestJS, mulai dari pengenalan dan instalasi, hingga fitur-fitur seperti autentikasi, middleware, guard, decorator, dan WebSocket. Selain itu, laporan ini juga akan membahas penggunaan NestJS bersama dengan Prisma untuk interaksi dengan database.
-
+```
+```
 1.5 Sistematika Penulisan
 - BAB I: PENDAHULUAN
 - BAB II: PEMBAHASAN
 - BAB III: KESIMPULAN
-
+```
+```
 BAB II
 PEMBAHASAN
 
@@ -65,15 +140,18 @@ yang efisien, skalabel, dan dapat dipelihara. Framework ini menggunakan arsitekt
 “nest new nama_proyek”
 3. Masuk ke direktori dengan perintah
 “cd nama_proyek”
-
+```
+```
 2.2.2. Setup Swagger di Nest JS
 1. Di direktori proyek, masukkan perintah “npm i –save @nestjs/swagger”
 2. Buka folder proyek di vscode menggunakan perintah “code .”
 3. Masuk ke main.ts lalu rubah semua codenya menjadi seperti ini:
+```
+```
 import { NestFactory } from '@nestjs/core'; 
 import { AppModule } from './app.module'; 
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'; 
- 
+
 async function bootstrap() { 
   const app = await NestFactory.create(AppModule); 
  
@@ -91,21 +169,24 @@ async function bootstrap() {
  
   await app.listen(process.env.PORT ?? 3030); 
 } 
-bootstrap(); 
-
+bootstrap();
+```
+```
 2.2.3. Jalankan Nest JS
 1. Untuk menjalankan nest JS. Harus buka folder proyek nest js, kemudian ketik “npm
 start”,
 2. Untuk menjalankan nest js dalam mode development(pengembangan) harus
 menggunakan perintah “npm run start:dev”
-
+```
+```
 2.3. Controller dan Services Nest JS
 1. Controller: Bayangkan sebuah hotel mewah. Resepsionis hotel adalah analogi yang tepat untuk Controller 
 dalam aplikasi NestJS. Resepsionis adalah orang pertama yang berinteraksi dengan tamu (klien
 aplikasi Anda).
 2. Service: Mari lanjutkan dengan analogi hotel. Service dalam aplikasi NestJS seperti dapur dan ruang 
 operasi hotel. Service adalah tempat di mana semua pekerjaan "berat" dan logika bisnis dilakukan.
-
+```
+```
 1.3.1. Tugas dari Controller dan Service
 1. Controller
 a. Menerima Tamu (Permintaan HTTP): Resepsionis menyambut tamu yang datang ke hotel,
@@ -132,7 +213,8 @@ e. Menyampaikan Informasi ke Tamu (Respons HTTP): Resepsionis menyampaikan
 informasi kepada tamu, seperti nomor kamar, tagihan, atau jadwal kegiatan hotel. Dalam
 NestJS, Controller mengubah data dari Service (jika perlu) menjadi format yang sesuai
 (misalnya, JSON) dan mengirimkannya kembali ke klien sebagai respons HTTP.
-
+```
+```
 2. Service
 a. Menerima Pesanan dari Resepsionis (Controller): Dapur dan ruang operasi menerima
 instruksi dari resepsionis (Controller), seperti permintaan untuk membuatkan makanan,
@@ -152,7 +234,8 @@ API, atau sumber data lain untuk mendapatkan atau menyimpan informasi.
 d. Mengembalikan Hasil ke Resepsionis (Controller): Setelah tugas selesai, dapur
 mengembalikan makanan yang sudah siap, ruang operasi memberikan data kamar. Dalam
 NestJS, Service mengembalikan hasil dari logika bisnis ke Controller. 
-
+```
+```
 2.4. Module dan Prisma JS
 1. Module (Rak): Tempat kita nmenyimpan "dapur" dan "pelayan". Jadi, biar rapi dan gampang dicari.
 2. Prisma (Alat Masak): Buat "ngurus" data di database. Jadi, kita tidak perlu repot-repot nulis kode buat "ngambil" atau "nyimpen" data.
@@ -164,7 +247,8 @@ b. Autentikasi: Memvalidasi identitas pengguna.
 c. Manipulasi Request/Response: Menambah, memodifikasi, atau memvalidasi data.
 d. Error Handling: Mengelola error yang terjadi selama proses request.
 2. Middleware umumnya digunakan untuk menyederhanakan pipeline request-response dalam aplikasi web.
-
+```
+```
 2.6. File
 1. File Uploader
 Alur dari mengupload sebuah file ke dalam backend secara local biasanya melewati beberapa tahap sebagai berikut : 
@@ -177,7 +261,8 @@ e. Menyimpan nama file beserta nama foldernya di database untuk digunakan lagi j
 2. File Getter
 a. Bermodalkan data filename dari database. Kita bisa membuat sebuah endpoint yang dapat mengget file dari filename menggunakan library fs.
 b. Lalu kita mengsend data tersebut menggunakan Response milik express. Biasanya data selain gambar akan detreat untuk didownload oleh client.
-
+```
+```
 2.7. Params
 Dalam pengembangan aplikasi web, terutama yang menggunakan arsitektur RESTful, params adalah bagian dari URL yang digunakan untuk mengidentifikasi sumber daya (resources) tertentu. params biasanya muncul setelah nama resource dalam URL.
 
@@ -185,11 +270,13 @@ Contoh:
 Dalam URL berikut: https://example.com/users/123, angka 123 adalah param yang mengidentifikasi user dengan ID 123.
 Bagaimana cara menggunakan params di NestJS?
 NestJS menyediakan decorator @Param() untuk mengambil nilai params dari URL. Decorator ini digunakan di dalam controller.
-
+```
+```
 2.8. WebSocket
 2.8.1. Apa itu WebSocket?
 WebSocket adalah protokol komunikasi yang diinisialisasi melalui HTTP, tetapi kemudian upgrade ke koneksi WebSocket setelah handshake awal. Ini memungkinkan server dan client untuk saling mengirim data kapan saja tanpa perlu menunggu permintaan dari pihak lain.
-
+```
+```
 2.8.2. Cara Kerja WebSocket
 a. Handshake Awal:
 - Client mengirim permintaan HTTP ke server dengan header khusus (Upgrade: websocket).
@@ -203,7 +290,8 @@ c. Pertukaran Data
 - Pesan dapat berupa teks (text frames) atau data biner (binary frames).
 d. Penutupan Koneksi
 - Koneksi WebSocket dapat ditutup oleh server atau client dengan mengirim frame penutup (close frame).
-
+```
+```
 BAB III
 KESIMPULAN
 Perkembangan teknologi informasi menuntut aplikasi backend yang efisien, skalabel, dan mudah dipelihara. Dalam hal ini, NestJS hadir sebagai framework backend berbasis TypeScript yang menawarkan arsitektur modular serta berbagai fitur canggih, seperti dependency injection, middleware, guard, decorator, dan WebSocket.
@@ -213,7 +301,7 @@ Laporan ini telah membahas berbagai aspek dari NestJS, mulai dari instalasi hing
 Dalam pengembangan aplikasi backend, konsep controller dan service memainkan peran penting dalam memisahkan logika bisnis dan pengelolaan data. Selain itu, penggunaan middleware, guard, serta decorator semakin meningkatkan keamanan dan fleksibilitas aplikasi. Teknologi WebSocket juga dibahas sebagai solusi komunikasi real-time yang efisien.
 
 Dengan memahami konsep dan fitur yang ditawarkan oleh NestJS, pengembang dapat membangun aplikasi backend yang modern, handal, dan mudah diskalakan.
-
+```
 
 # Diagram Proyek
 
@@ -278,66 +366,4 @@ stateDiagram-v2
 ```
 
 ```
-```
-# Struktur file
-    📦LATIHAN-NEST
-    ┃ 📦dist
-    ┃ 📦node-# Project Structure
-    📦LATIHAN-NEST
-    ┃ 📦dist
-    ┃ ┃ ┗ 📜... (Output untuk file yang telah dikompilasi)
-    ┃ 📦node-modules
-    ┃ ┃ ┗ 📜... (Direktori yang berisi semua dependensi Node.js yang diinstal)
-    ┃ 📦prisma
-    ┃ ┃ ┗ 📜schema.prisma (Skema database Prisma)
-    ┃ 📦src
-    ┃ ┣ 📂chat
-    ┃ ┃ ┣ 📂dto
-    ┃ ┃ ┃ ┣ 📜create-chat.dto.ts (DTO untuk membuat chat baru)
-    ┃ ┃ ┃ ┗ 📜update-chat.dto.ts (DTO untuk memperbarui chat)
-    ┃ ┃ ┣ 📂entities
-    ┃ ┃ ┃ ┗ 📜chat.entity.ts (Entitas chat)
-    ┃ ┃ ┣ 📜chat.gateway.spec.ts (File pengujian untuk gateway chat)
-    ┃ ┃ ┣ 📜chat.gateway.ts (Mengatur komunikasi WebSocket untuk fitur chat)
-    ┃ ┃ ┣ 📜chat.module.ts (Modul chat)
-    ┃ ┃ ┣ 📜chat.service.spec.ts (File pengujian untuk service chat)
-    ┃ ┃ ┗ 📜chat.service.ts (Service untuk fitur chat)
-    ┃ ┣ 📂dto
-    ┃ ┃ ┣ 📜catatan.txt (Catatan umum)
-    ┃ ┃ ┣ 📜create-mahasiswa.dto.ts (DTO untuk membuat mahasiswa baru)
-    ┃ ┃ ┣ 📜login-user.dto.ts (DTO untuk login pengguna)
-    ┃ ┃ ┣ 📜register-user.dto.ts (DTO untuk registrasi pengguna)
-    ┃ ┃ ┗ 📜update-mahasiswa.dto.ts (DTO untuk memperbarui mahasiswa)
-    ┃ ┣ 📂entity
-    ┃ ┃ ┗ 📜user.entity.ts (Entitas pengguna)
-    ┃ ┣ 📂profile
-    ┃ ┃ ┣ 📜profile.controller.spec.ts (File pengujian untuk controller profil)
-    ┃ ┃ ┣ 📜profile.controller.ts (Controller untuk fitur profil)
-    ┃ ┃ ┣ 📜profile.module.ts (Modul profil)
-    ┃ ┃ ┣ 📜profile.service.spec.ts (File pengujian untuk service profil)
-    ┃ ┃ ┗ 📜profile.service.ts (Service untuk fitur profil)
-    ┃ ┣ 📜app.controller.spec.ts (File pengujian untuk controller utama)
-    ┃ ┣ 📜app.controller.ts (Controller utama aplikasi)
-    ┃ ┣ 📜app.module.ts (Modul utama aplikasi)
-    ┃ ┣ 📜app.service.ts (Service utama aplikasi)
-    ┃ ┣ 📜auth-module.ts (Modul untuk autentikasi)
-    ┃ ┣ 📜auth.guard.ts (Guard untuk autentikasi)
-    ┃ ┣ 📜main.ts (File entry point aplikasi)
-    ┃ ┣ 📜prisma.servis.ts (Service untuk Prisma)
-    ┃ ┣ 📜prisma.ts (File konfigurasi Prisma)
-    ┃ ┗ 📜user.decorator.ts (Dekorator untuk pengguna)
-    ┃ 📦test
-    ┃ ┣ 📜app.e2e-spec.ts (File pengujian end-to-end untuk aplikasi)
-    ┃ ┗ 📜jest-e2e.json (Konfigurasi Jest untuk pengujian end-to-end)
-    ┃ 📦uploads
-    ┃ ┗ 📜105841106922-1738231723215-614657552.jpg (Contoh file yang diunggah)
-    ┃ ┣ 📜.env (File konfigurasi environment)
-    ┃ ┣ 📜.gitignore (File untuk mengabaikan file dan direktori tertentu dalam Git)
-    ┃ ┣ 📜.prettierrc (Konfigurasi untuk Prettier)
-    ┃ ┣ 📜nest-cli.json (Konfigurasi untuk Nest CLI)
-    ┃ ┣ 📜package-lock.json (File lock untuk npm)
-    ┃ ┣ 📜package.json (File konfigurasi proyek Node.js)
-    ┃ ┣ 📜README.md (File dokumentasi proyek)
-    ┃ ┣ 📜tsconfig.build.json (Konfigurasi TypeScript untuk build)
-    ┗ ┗ 📜tsconfig.json (Konfigurasi utama TypeScript
-```
+
