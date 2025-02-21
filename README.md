@@ -44,7 +44,8 @@ Laporan ini akan membahas berbagai aspek dari NestJS, mulai dari pengenalan dan 
 
 BAB II
 PEMBAHASAN
-1.1. Apa itu Backend?
+
+2.1. Apa itu Backend?
 Backend adalah bagian dari pengembangan perangkat lunak yang berfungsi
 sebagai otak atau penggerak aplikasi. Backend bertanggung jawab untuk mengelola
 data, logika bisnis, autentikasi, dan komunikasi antara frontend (antarmuka
@@ -52,12 +53,12 @@ pengguna) dan server atau database. Jika frontend adalah bagian aplikasi yang
 terlihat oleh pengguna, backend adalah bagian yang bekerja di belakang layar untuk
 memastikan semuanya berjalan lancar.
 
-1.2. Apa itu NestJS?
+2.2. Apa itu NestJS?
 NestJS adalah framework backend progresif berbasis TypeScript (dapat juga
 digunakan dengan JavaScript) yang dirancang untuk membangun aplikasi serverside
 yang efisien, skalabel, dan dapat dipelihara. Framework ini menggunakan arsitektur modular dan memanfaatkan konsep-konsep modern dari Node.js serta pola desain seperti Dependency Injection (DI) dan Inversion of Control (IoC). NestJS terinspirasi oleh framework seperti Angular di frontend, sehingga memiliki struktur yang terorganisasi dengan baik dan mudah dipelajari oleh pengembang yang sudah familiar dengan Angular.
 
-1.2.1. Cara Membuat Proyek NestJS
+2.2.1. Cara Membuat Proyek NestJS
 1. Install nest js CLI dengan menggunakan perintah 
 “npm i -g @nestjs/cli”
 2. Inisialisasi proyek nest js dengan menggunakan perintah 
@@ -65,7 +66,7 @@ yang efisien, skalabel, dan dapat dipelihara. Framework ini menggunakan arsitekt
 3. Masuk ke direktori dengan perintah
 “cd nama_proyek”
 
-1.2.2. Setup Swagger di Nest JS
+2.2.2. Setup Swagger di Nest JS
 1. Di direktori proyek, masukkan perintah “npm i –save @nestjs/swagger”
 2. Buka folder proyek di vscode menggunakan perintah “code .”
 3. Masuk ke main.ts lalu rubah semua codenya menjadi seperti ini:
@@ -92,13 +93,13 @@ async function bootstrap() {
 } 
 bootstrap(); 
 
-1.2.3. Jalankan Nest JS
+2.2.3. Jalankan Nest JS
 1. Untuk menjalankan nest JS. Harus buka folder proyek nest js, kemudian ketik “npm
 start”,
 2. Untuk menjalankan nest js dalam mode development(pengembangan) harus
 menggunakan perintah “npm run start:dev”
 
-1.3. Controller dan Services Nest JS
+2.3. Controller dan Services Nest JS
 1. Controller: Bayangkan sebuah hotel mewah. Resepsionis hotel adalah analogi yang tepat untuk Controller 
 dalam aplikasi NestJS. Resepsionis adalah orang pertama yang berinteraksi dengan tamu (klien
 aplikasi Anda).
@@ -152,11 +153,11 @@ d. Mengembalikan Hasil ke Resepsionis (Controller): Setelah tugas selesai, dapur
 mengembalikan makanan yang sudah siap, ruang operasi memberikan data kamar. Dalam
 NestJS, Service mengembalikan hasil dari logika bisnis ke Controller. 
 
-1.4. Module dan Prisma JS
+2.4. Module dan Prisma JS
 1. Module (Rak): Tempat kita nmenyimpan "dapur" dan "pelayan". Jadi, biar rapi dan gampang dicari.
 2. Prisma (Alat Masak): Buat "ngurus" data di database. Jadi, kita tidak perlu repot-repot nulis kode buat "ngambil" atau "nyimpen" data.
 
-1.5. Middleware, Guard and Decorator
+2.5. Middleware, Guard and Decorator
 1. Middleware adalah perangkat lunak yang terletak di antara sistem operasi dan aplikasi pada perangkat atau antara dua komponen sistem dalam suatu aplikasi. Di konteks aplikasi web, middleware adalah fungsi yang dijalankan sebelum permintaan (request) mencapai route handler atau controller. Fungsi utamanya adalah memproses request dan response, seperti:
 a. Logging: Mencatat aktivitas request.
 b. Autentikasi: Memvalidasi identitas pengguna.
@@ -164,7 +165,7 @@ c. Manipulasi Request/Response: Menambah, memodifikasi, atau memvalidasi data.
 d. Error Handling: Mengelola error yang terjadi selama proses request.
 2. Middleware umumnya digunakan untuk menyederhanakan pipeline request-response dalam aplikasi web.
 
-1.6. File
+2.6. File
 1. File Uploader
 Alur dari mengupload sebuah file ke dalam backend secara local biasanya melewati beberapa tahap sebagai berikut : 
 a. File akan dikirimkan melalui request. Untuk dapat mengirimkan sebuah file, biasanya client akan mengirimkannya dalam bentuk Form. Berbeda dengan cara pengiriman data seperti biasanya, untuk menerima data dalam bentuk Form juga harus memerlukan sebuah konfigurasi untuk endpoint yang akan menerimanya. Data yang bukan gambar yang dikirimkan melalui Form akan selalu bertipe string.
@@ -177,7 +178,7 @@ e. Menyimpan nama file beserta nama foldernya di database untuk digunakan lagi j
 a. Bermodalkan data filename dari database. Kita bisa membuat sebuah endpoint yang dapat mengget file dari filename menggunakan library fs.
 b. Lalu kita mengsend data tersebut menggunakan Response milik express. Biasanya data selain gambar akan detreat untuk didownload oleh client.
 
-1.7. Params
+2.7. Params
 Dalam pengembangan aplikasi web, terutama yang menggunakan arsitektur RESTful, params adalah bagian dari URL yang digunakan untuk mengidentifikasi sumber daya (resources) tertentu. params biasanya muncul setelah nama resource dalam URL.
 
 Contoh:
@@ -185,11 +186,11 @@ Dalam URL berikut: https://example.com/users/123, angka 123 adalah param yang me
 Bagaimana cara menggunakan params di NestJS?
 NestJS menyediakan decorator @Param() untuk mengambil nilai params dari URL. Decorator ini digunakan di dalam controller.
 
-1.8. WebSocket
-1.8.1. Apa itu WebSocket?
+2.8. WebSocket
+2.8.1. Apa itu WebSocket?
 WebSocket adalah protokol komunikasi yang diinisialisasi melalui HTTP, tetapi kemudian upgrade ke koneksi WebSocket setelah handshake awal. Ini memungkinkan server dan client untuk saling mengirim data kapan saja tanpa perlu menunggu permintaan dari pihak lain.
 
-1.8.2. Cara Kerja WebSocket
+2.8.2. Cara Kerja WebSocket
 a. Handshake Awal:
 - Client mengirim permintaan HTTP ke server dengan header khusus (Upgrade: websocket).
 - Jika server mendukung WebSocket, server akan merespons dengan status code 101 Switching Protocols, yang menandakan bahwa koneksi akan di-upgrade ke WebSocket.
